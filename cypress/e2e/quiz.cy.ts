@@ -12,5 +12,8 @@ describe('Quiz E2E', () => {
                 cy.get('[data-testid="next-button"]').click()
             })
         })
+
+        cy.get('[data-testid="final-score"]').should('be.visible')
+        cy.get('[data-testid="restart-button"]').should('be visible')
     })
 })
