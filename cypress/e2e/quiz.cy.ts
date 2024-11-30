@@ -24,5 +24,10 @@ describe('Quiz E2E', () => {
             cy.get('[data-testid="answer-option"]').each(($option) => {
                 cy.wrap($option).click()
                 cy.get('[data-testid=:next-button"]').click()
-        }))
+        })
+})
+
+cy.get('[data-testid="restart-button"]').click()
+cy.get('[data-testid="quiz-container"]').should('be.visable')
+    })
 })
