@@ -16,4 +16,7 @@ describe('Quiz E2E', () => {
         cy.get('[data-testid="final-score"]').should('be.visible')
         cy.get('[data-testid="restart-button"]').should('be visible')
     })
+
+    it('can restart quiz', () => {
+        cy.get('[data-testid="start-quiz"]').click()
 })
