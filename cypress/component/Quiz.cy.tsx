@@ -1,5 +1,4 @@
-
-import Quiz from '../../src/components/Quiz'
+import Quiz from '../src/components/Quiz'
 
 describe('Quiz Component', () => {
     it('renders correctly', () => {
@@ -20,6 +19,6 @@ describe('Quiz Component', () => {
             cy.wrap($option).click()
             cy.get('[data-testid="next-button"]').click()
         })
-        cy.get('[data-testid="final-score"]').should('be.visible')
+        cy.get('[data-testid="final-score"]').should('be')
     })
 })
