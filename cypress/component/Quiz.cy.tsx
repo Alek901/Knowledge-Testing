@@ -8,5 +8,11 @@ describe('Quiz Component', () => {
         cy.get('[data-testid="next-button"]').click()
     })
 
+    it('allows answering questions', () => {
+        cy.mount(<Quiz />)
+        cy.get('[data-testid="answer-option"]').first().click()
+        cy.get('[data-testid="next-button"]').click()
+    })
+
     
 }
